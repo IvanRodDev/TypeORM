@@ -1,0 +1,15 @@
+version: '3.3'
+
+services:
+  postgresTest:
+    image: postgres:13
+    environment:
+      - POSTGRES_DB=typeOrmDb
+      - POSTGRES_USER=Ivan
+      - POSTGRES_PASSWORD=123
+    ports:
+      - 5900:5900
+    volumes:
+      - ./postgres_data:/var/lib/postgresql
+
+ 
